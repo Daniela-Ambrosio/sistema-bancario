@@ -1,9 +1,12 @@
 import streamlit as st
 from banco import Banco
 
-st.set_page_config(page_title="Sistema Bancário")
+st.set_page_config(
+    page_title="Sistema Bancário",
+    
+    )
 
-st.title("Banco do Brejo")
+st.title("Bem-vindo ao Banco do Brejo")
 
 if 'banco' not in st.session_state:
     st.session_state['banco'] = Banco("Banco do Brejo", 999)
@@ -11,16 +14,15 @@ if 'banco' not in st.session_state:
 bc = st.session_state['banco']
 
 #barra lateral =========================================
-menu = st.sidebar.selectbox(
-    "Menu Principal",
+menu = st.selectbox(
+    "Menu",
     ["Início", "Abrir Conta", "Encerrar Conta", "Depositar", "Sacar", "Transferência", "Extrato"]
 )
 
 
 #Menu ================================
 if menu == "Início":
-    st.write("Bem-vindo ao Banco do Brejo.")
-    st.info("Selecione uma opção no menu ao lado.")
+    st.info("Selecione uma opção no menu acima.")
 
 elif menu == "Abrir Conta":
     st.header("Nova Conta")

@@ -6,15 +6,19 @@ class FichaBancaria:
         self.__cpf = cpf
         self.__saldo = 0
 
+    @property    
     def get_numero(self):
         return self.__numero
-
+        
+    @property
     def get_nome(self):
         return self.__nome
-
+        
+    @property
     def get_saldo(self):
         return self.__saldo
-
+        
+    @property
     def get_cpf(self):
         return self.__cpf
 

@@ -30,7 +30,7 @@ class Banco:
         if cpf_cliente in self.__fichario:
             conta = self.__fichario[cpf_cliente]
             
-            if conta.get_saldo() >= valor:
+            if conta.get_saldo >= valor:
                 conta.debite(valor)
                 return True        
             else:
@@ -44,7 +44,7 @@ class Banco:
             conta_origem = self.__fichario[cpf_origem]
             conta_destino = self.__fichario[cpf_destino]
             
-            if conta_origem.get_saldo() >= valor:
+            if conta_origem.get_saldo >= valor:
                 conta_origem.debite(valor)
                 conta_destino.credite(valor)
                 return True
@@ -57,7 +57,7 @@ class Banco:
     
         if cpf_cliente in self.__fichario:
             conta = self.__fichario[cpf_cliente]
-            saldo = conta.get_saldo()
+            saldo = conta.get_saldo
             return saldo
         else:
             return False
